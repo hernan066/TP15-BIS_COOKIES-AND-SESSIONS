@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/app.css" />
+    <title>Document</title>
+  </head>
+  <body style= "<%- locals.user.colores && `background:linear-gradient(0deg, ${locals.user.colores} 0%, rgba(238,244,239,1) 100%);`%>">
+    <div class="container">
+      <h3>
+        Hola <%= locals.user.nombre %> , elegiste el color: <%= locals.user.colores %>, tu email es:
+        <%= locals.user.email %> y tu edad es: <%= locals.user.edad ? locals.user.edad : "N/A" %>
+      </h3>
+      <a href="/">Volver a Home</a>
+    </div>
+  </body>
+</html>
